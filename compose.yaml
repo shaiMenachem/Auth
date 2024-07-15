@@ -28,7 +28,7 @@ services:
       - postgres
 
   server:
-    build: ./
+    build: ./server
     environment:
       keycloakIp: keycloak
       clientId: "shai"
