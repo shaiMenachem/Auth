@@ -13,7 +13,6 @@ app.post('/check-credentials', async (req, res) => {
     await authenticate();
     // Get clients
     const clients = await kcAdminClient.clients.find({ realm: 'master' });
-    console.log()
 
     // Find the client by clientId
     const client = clients.find(client => client.clientId === clientId);

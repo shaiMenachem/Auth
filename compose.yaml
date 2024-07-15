@@ -26,3 +26,14 @@ services:
       - "9000:9000"
     depends_on:
       - postgres
+
+  server:
+    build: ./
+    environment:
+      keycloakIp: keycloak
+      clientId: "shai"
+      clientSecret: "secret"
+    ports:
+      - "8080:8080"
+      - "8443:8443"
+      - "9000:9000"
